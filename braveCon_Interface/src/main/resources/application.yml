@@ -1,0 +1,32 @@
+server:
+  port: 9966
+
+spring:
+  datasource: # ???????
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/braveconoa?useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+  servlet:
+    multipart:
+      max-file-size: 500MB # ????????
+      max-request-size: 500MB # ??????????
+  application:
+    name: braveCon_Interface
+
+mybatis:
+  type-aliases-package: com.nocevarb.bravecon_interface # ????
+  mapper-locations: classpath:mappers/*.xml
+
+# ??SQL???  com.homestay.mapper.UserMapper  ???Mapper???
+#logging:
+#  level:
+#    com.nocevarb.bravecon_interface.mapper.UserMapper: debug
+
+
+#file:
+#  uploadPath: F:/HOME/College_Sub/College_Java/Cat_Manager/upload/CatManage
+#  staticAccessPath: /file/
+
+
+
