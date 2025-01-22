@@ -8,38 +8,35 @@
 *{
   font-family:Helvetica, Tahoma, Arial;
 }
-*::selection {
-  background:#ccc;
-}
-*::-moz-selection {
-  background:#ccc;
-}
 html, body, #app {
   margin: 0;
   padding: 0;
 }
-.el-header,.el-main,.el-footer{
-  padding: 0px !important;
-}
 
-.el-radio__input.is-checked .el-radio__inner {
-  border-color: #767676;
-  background: #767676;
-}
+
 #app {
   width: 100%;
   height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+
 }
 </style>
 
 
 
 <script>
+import DevicePixelRatio from "@/util/AutoResolution";
+
+
 export default {
   data() {
     return {
       isRouterAlive: true
     };
+  },created() {
+    new DevicePixelRatio().init();
   },
   methods: {
 

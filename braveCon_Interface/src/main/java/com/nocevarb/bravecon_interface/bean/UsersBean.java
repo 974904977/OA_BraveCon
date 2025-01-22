@@ -23,4 +23,5 @@ public class UsersBean {
     private String position;
     private String phone;
     private String email;
+    private int isdelete;
 }

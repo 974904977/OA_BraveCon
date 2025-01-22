@@ -22,6 +22,6 @@ public class UsersController {
         //调用service  根据用户名和用户类型查询信息
         UsersBean vo=service.queryByUserName(user);
 
-        return ResultVO.success("密码错误",vo);
+        return ResultVO.success("登录成功",vo);
     }
 }
